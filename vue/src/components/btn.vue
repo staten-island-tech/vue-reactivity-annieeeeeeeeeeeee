@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>
+    <button class="button">
       <slot></slot>
     </button>
   </div>
@@ -10,4 +10,8 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+button {
+  background-color: rgb(255, 255, 255);
+}
+</style>
