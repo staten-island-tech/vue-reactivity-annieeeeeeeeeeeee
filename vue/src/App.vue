@@ -1,5 +1,5 @@
 <script setup>
-import btn from "./components/btn.vue";
+//import btn from "./components/btn.vue";
 //import { RouterLink, RouterView } from 'vue-router'
 //import HelloWorld from './components/HelloWorld.vue'
 </script>
