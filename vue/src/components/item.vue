@@ -4,7 +4,7 @@ import btn from "../components/btn.vue";
 
 <template>
   <div class="card" v-for="product in products">
-    <img src="barbie 1.webp" />
+    <img :src="product.img" />
     <h3>{{ product.itemName }}</h3>
     <h4>{{ product.brand }}</h4>
     <btn>Add to Cart</btn>
@@ -19,10 +19,11 @@ export default {
         {
           itemName: "Purse",
           brand: "Chanel",
-          img: "barbie 1.webp",
+          img: "@/assets/strawberry.jpg",
+          alt: "",
         },
-        { itemName: "Jofew", brand: "Chanel", img: "" },
-        { itemName: "HEHEE", brand: "Dior", img: "" },
+        { itemName: "Jofew", brand: "Chanel", img: "", alt: "" },
+        { itemName: "HEHEE", brand: "Dior", img: "", alt: "" },
       ],
     };
   },
