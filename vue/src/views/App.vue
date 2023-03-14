@@ -1,12 +1,12 @@
 <script setup>
 import btn from "../components/btn.vue";
 import item from "../components/item.vue";
-import nav from "../components/nav.vue";
+import top from "../components/top.vue";
 </script>
 
 <template>
   <main>
-    <!-- <btn>Add to Cart</btn> -->
+    <top></top>
     <item />
   </main>
 </template>
