@@ -9,7 +9,7 @@ import btn from "../components/btn.vue";
       <h3>{{ product.itemName }}</h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn>Add to Cart</btn>
+      <btn id="card-btn">Add to Cart</btn>
     </div>
   </section>
 </template>
@@ -22,7 +22,7 @@ export default {
         {
           itemName: "Purse",
           brand: "Chanel",
-          img: "@/assets/strawberry.jpg",
+          img: "../assets/strawberry.jpg",
           alt: "",
           price: 7927,
         },
@@ -55,9 +55,23 @@ div {
   border: solid;
   border-width: 2px;
   margin-top: 5rem;
+  text-align: center;
 }
 
 h3 {
   font-size: 5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+img {
+  width: 45rem;
+  height: 20rem;
+}
+
+#card-btn {
+  margin-top: 5rem;
 }
 </style>

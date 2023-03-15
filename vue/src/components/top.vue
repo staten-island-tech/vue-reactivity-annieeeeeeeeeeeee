@@ -5,8 +5,8 @@ import cart from "../components/cart.vue";
 <template>
   <div>
     <h1>The Archive</h1>
+    <cart></cart>
   </div>
-  <cart></cart>
 </template>
 
 <script>
@@ -23,5 +23,6 @@ h1 {
   padding-bottom: 2rem;
   margin-left: 1rem;
   color: white;
+  display: inline-block;
 }
 </style>

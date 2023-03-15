@@ -13,12 +13,9 @@ button {
   background-color: #fff;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
-  box-sizing: border-box;
   color: #000000;
   cursor: pointer;
-  display: inline-block;
   font-size: 1.1rem;
-  font-weight: 600;
   line-height: 1;
   padding: 1rem 1.6rem;
   text-align: center;
