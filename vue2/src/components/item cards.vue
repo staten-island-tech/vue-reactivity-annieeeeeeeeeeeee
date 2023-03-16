@@ -1,5 +1,5 @@
 <script setup>
-import btn from "../components/btn.vue";
+import btn from "./btn template.vue";
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import btn from "../components/btn.vue";
       <h3>{{ product.itemName }}</h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn id="card-btn">Add to Cart</btn>
+      <btn id="card-btn" @click="push">Add to Cart</btn>
     </div>
   </section>
 </template>
@@ -34,6 +34,14 @@ export default {
         { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4354 },
       ],
     };
+  },
+
+  methods: {
+    cart: [],
+    push(e) {
+      this.cart.push(e.target.parentElement);
+      console.log(cart);
+    },
   },
 };
 </script>

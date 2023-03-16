@@ -1,7 +1,7 @@
 <script setup>
-import btn from "../components/btn.vue";
-import item from "../components/item.vue";
-import top from "../components/top.vue";
+import btn from "../components/btn template.vue";
+import item from "../components/item cards.vue";
+import top from "../components/top part.vue";
 </script>
 
 <template>
