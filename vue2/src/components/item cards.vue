@@ -6,11 +6,13 @@ import btn from "./btn template.vue";
   <section>
     <div class="card" v-for="product in products">
       <img :src="product.img" :alt="product.alt" />
-      <h3>{{ product.itemName }}</h3>
+      <h3 name="{{ product.itemName }}">{{ product.itemName }}</h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn id="card-btn" @click="push">Add to Cart</btn>
+      <btn id="card-btn" @click="addToCart">Add to Cart</btn>
     </div>
+
+    <p v-for="cart in carts">{{ carts }}</p>
   </section>
 </template>
 
@@ -33,14 +35,14 @@ export default {
         { itemName: "HEHEE", brand: "Dior", img: "", alt: "", price: 4879 },
         { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4354 },
       ],
+
+      carts: [],
     };
   },
 
   methods: {
-    cart: [],
-    push(e) {
-      this.cart.push(e.target.parentElement);
-      console.log(cart);
+    addToCart(e) {
+      this.carts.push(e.target.getAttribute("name"));
     },
   },
 };
