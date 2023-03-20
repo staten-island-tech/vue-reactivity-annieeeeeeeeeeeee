@@ -8,5 +8,14 @@ import top from "../components/top part.vue";
   <main>
     <top></top>
     <item />
+    <btn @click="show = !show" id="cart">Cart</btn>
   </main>
 </template>
+
+<style>
+#cart {
+  float: right;
+  margin-right: 2rem;
+  margin-top: 2.5rem;
+}
+</style>

@@ -6,7 +6,7 @@ import btn from "./btn template.vue";
   <section>
     <div class="card" v-for="product in products">
       <img :src="product.img" :alt="product.alt" />
-      <h3 name="{{ product.itemName }}">{{ product.itemName }}</h3>
+      <h3 name="{{ product.itemName }}"></h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
       <btn id="card-btn" @click="addToCart">Add to Cart</btn>
@@ -42,7 +42,10 @@ export default {
 
   methods: {
     addToCart(e) {
-      this.carts.push(e.target.getAttribute("name"));
+      this.carts.push({
+        itemName: e.target.getAttribute("name"),
+        brand: e.target.getAttribute,
+      });
     },
   },
 };
