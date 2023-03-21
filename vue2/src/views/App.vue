@@ -1,13 +1,21 @@
 <script setup>
 import btn from "../components/btn template.vue";
-import item from "../components/item cards.vue";
+import hey from "../components/hey.vue";
 import top from "../components/top part.vue";
+</script>
+
+<script>
+export default {
+  components: {
+    hey,
+  },
+};
 </script>
 
 <template>
   <main>
     <top></top>
-    <item />
+    <hey />
     <btn @click="show = !show" id="cart">Cart</btn>
   </main>
 </template>

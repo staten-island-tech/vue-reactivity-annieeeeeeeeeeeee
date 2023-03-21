@@ -1,6 +1,6 @@
 <script setup>
-//import { store } from "./store.js";
-import btn from "./btn template.vue";
+import { store } from "./store.js";
+import cart from "./cart pop-up.vue";
 </script>
 
 <template>
@@ -42,13 +42,13 @@ export default {
   },
 
   /*  methods: {
-    addToCart(e) {
-      this.carts.push({
-        itemName: e.target.getAttribute("name"),
-        brand: e.target.getAttribute,
-      });
-    },
-  }, */
+      addToCart(e) {
+        this.carts.push({
+          itemName: e.target.getAttribute("name"),
+          brand: e.target.getAttribute,
+        });
+      },
+    }, */
 };
 </script>
 
