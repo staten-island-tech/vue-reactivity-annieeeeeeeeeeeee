@@ -1,13 +1,15 @@
-<script setup>
-import btn from "../components/btn template.vue";
-import hey from "../components/hey.vue";
-import top from "../components/top part.vue";
-</script>
+<!-- <script setup></script> -->
 
 <script>
+import btn from "../components/btn template.vue";
+import items from "../components/item cards.vue";
+import cart from "../components/cart overlay.vue";
+import top from "../components/top part.vue";
 export default {
   components: {
-    hey,
+    items,
+    cart,
+    top,
   },
 };
 </script>
@@ -15,8 +17,8 @@ export default {
 <template>
   <main>
     <top></top>
-    <hey />
-    <btn @click="show = !show" id="cart">Cart</btn>
+    <items />
+    <!-- <btn @click="show = !show" id="cart">Cart</btn> -->
   </main>
 </template>
 

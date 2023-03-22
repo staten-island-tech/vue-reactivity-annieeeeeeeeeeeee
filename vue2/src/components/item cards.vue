@@ -1,5 +1,5 @@
 <script setup>
-//import { store } from "./store.js";
+import { store } from "../store.js";
 import btn from "./btn template.vue";
 </script>
 
@@ -10,7 +10,7 @@ import btn from "./btn template.vue";
       <h3 name="{{ product.itemName }}"></h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn id="card-btn">Add to Cart</btn>
+      <btn id="card-btn" @click="store.addToCart()">Add to Cart</btn>
     </div>
 
     <!-- <p v-for="cart in carts">{{ carts.itemName }}</p> -->
@@ -38,6 +38,7 @@ export default {
       ],
 
       //carts: [],
+      store,
     };
   },
 
