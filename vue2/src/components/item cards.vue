@@ -5,12 +5,14 @@ import btn from "./btn template.vue";
 
 <template>
   <section>
-    <div class="card" v-for="product in products">
+    <div class="card" id="display-cards" v-for="product in products">
       <img :src="product.img" :alt="product.alt" />
-      <h3 name="{{ product.itemName }}"></h3>
+      <h3 id="product-name" name="{{ product.itemName }}"></h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn id="card-btn" @click="store.addToCart()">Add to Cart</btn>
+      <btn id="card-btn" @click="store.addToCart(), store.increment()"
+        >Add to Cart</btn
+      >
     </div>
 
     <!-- <p v-for="cart in carts">{{ carts.itemName }}</p> -->

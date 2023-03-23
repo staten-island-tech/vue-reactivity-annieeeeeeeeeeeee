@@ -1,8 +1,15 @@
 import { reactive } from "vue";
 
 export const store = reactive({
+  count: 0,
+  increment() {
+    this.count++;
+  },
   cart: [],
   addToCart(e) {
-    this.cart.push(e.target.parentElement);
+    let product = e.closest("#display-cards");
+    this.cart.push({
+      itemName: `"${product.find("#product-name").text()}"`,
+    });
   },
 });

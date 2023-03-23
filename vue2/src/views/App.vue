@@ -19,6 +19,7 @@ export default {
     <top></top>
     <items />
     <!-- <btn @click="show = !show" id="cart">Cart</btn> -->
+    <cart></cart>
   </main>
 </template>
 

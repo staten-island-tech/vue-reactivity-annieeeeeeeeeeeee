@@ -2,13 +2,11 @@
 import btn from "./btn template.vue";
 //import products from "../src/array.js";
 import cart from "./item cards.vue";
-//import { store } from "./store.js";
+import { store } from "../store.js";
 </script>
 
 <template>
-  <btn @click="show = !show" id="cart">Cart</btn>
-
-  <transition v-if="show"><h1>lol</h1></transition>
+  <btn id="cart">Cart ({{ store.count }}) </btn>
 </template>
 
 <script>
@@ -19,6 +17,7 @@ export default {
       this.cart.push(e.target.parentElement);
     },
   }, */
+
 };
 </script>
 
