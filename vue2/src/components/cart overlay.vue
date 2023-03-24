@@ -1,12 +1,13 @@
 <script setup>
 import { store } from "../store.js";
 import cart from "./cart pop-up.vue";
+import { products } from "../items.js";
 </script>
 
 <template>
   <section>
-    <div class="card" id="cart-cards" v-for="item in cart">
-      <h3 id="product-name">{{ item.itemName }}</h3>
+    <div>
+      <h3 id="product-name">hi</h3>
     </div>
   </section>
 </template>
@@ -16,7 +17,14 @@ export default {
   data() {
     return {
       store,
+      products,
     };
+  },
+
+  computed: {
+    cart() {
+      return this.products.filter((e) => e.div.contains("clicked"));
+    },
   },
 };
 </script>

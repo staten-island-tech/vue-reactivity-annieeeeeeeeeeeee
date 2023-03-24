@@ -1,6 +1,7 @@
 <script setup>
 import { store } from "../store.js";
 import btn from "./btn template.vue";
+import { products } from "../items.js";
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import btn from "./btn template.vue";
       <h3 id="product-name" name="{{ product.itemName }}"></h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn id="card-btn" @click="store.addToCart(), store.increment()"
+      <btn id="card-btn" @click="store.increment(), store.addToCart()"
         >Add to Cart</btn
       >
     </div>
@@ -23,7 +24,7 @@ import btn from "./btn template.vue";
 export default {
   data() {
     return {
-      products: [
+      /* products: [
         {
           itemName: "Purse",
           brand: "Chanel",
@@ -37,7 +38,8 @@ export default {
         { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4283 },
         { itemName: "HEHEE", brand: "Dior", img: "", alt: "", price: 4879 },
         { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4354 },
-      ],
+      ], */
+      products,
 
       //carts: [],
       store,

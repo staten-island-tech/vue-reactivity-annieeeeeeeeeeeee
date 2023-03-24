@@ -7,9 +7,19 @@ export const store = reactive({
   },
   cart: [],
   addToCart(e) {
-    let product = e.closest("#display-cards");
-    this.cart.push({
-      itemName: `"${product.find("#product-name").text()}"`,
-    });
+    /*     let name = e.target.dataset.itemName;
+    console.log(name);
+    let price = e.target.dataset.itemName; */
+    //const element = document.getElementById("#display-cards");
+    /*  this.cart.push({
+      itemName: `"${name}"`,
+    }); */
+    if (e) {
+      let product = e.target.closest("#display-cards");
+      this.cart.push({
+        itemName: 1`"${product.find("#product-name").text()}"`,
+      });
+      console.log(cart.itemName);
+    }
   },
 });
