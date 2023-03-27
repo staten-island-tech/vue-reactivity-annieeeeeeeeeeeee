@@ -5,21 +5,18 @@ export const store = reactive({
   increment() {
     this.count++;
   },
-  cart: [],
+
   addToCart(e) {
-    /*     let name = e.target.dataset.itemName;
-    console.log(name);
-    let price = e.target.dataset.itemName; */
-    //const element = document.getElementById("#display-cards");
-    /*  this.cart.push({
-      itemName: `"${name}"`,
-    }); */
+    let cartArray = [];
     if (e) {
-      let product = e.target.closest("#display-cards");
-      this.cart.push({
-        itemName: 1`"${product.find("#product-name").text()}"`,
+      let product = e.target.parentElement;
+      let name = product.textContent;
+      console.log(name);
+      this.cartArray.push({
+        itemName: name,
       });
       console.log(cart.itemName);
+      console.log("hi");
     }
   },
 });

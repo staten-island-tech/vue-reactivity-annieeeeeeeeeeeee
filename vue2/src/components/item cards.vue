@@ -11,7 +11,12 @@ import { products } from "../items.js";
       <h3 id="product-name" name="{{ product.itemName }}"></h3>
       <h4>{{ product.brand }}</h4>
       <h4>${{ product.price }}</h4>
-      <btn id="card-btn" @click="store.increment(), store.addToCart()"
+      <btn
+        id="card-btn"
+        @click="
+          store.addToCart(e);
+          store.increment();
+        "
         >Add to Cart</btn
       >
     </div>
@@ -47,11 +52,19 @@ export default {
   },
 
   /*  methods: {
+    cart: [],
     addToCart(e) {
-      this.carts.push({
-        itemName: e.target.getAttribute("name"),
-        brand: e.target.getAttribute,
-      });
+      //console.log("hi");
+      if (e) {
+        let product = e.target.parentElement;
+        let name = product.textContent;
+        console.log(name);
+        this.cart.push({
+          itemName: name,
+        });
+        console.log(cart.itemName);
+        console.log("hi");
+      }
     },
   }, */
 };
