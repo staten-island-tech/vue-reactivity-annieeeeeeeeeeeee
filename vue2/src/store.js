@@ -1,5 +1,6 @@
 import { reactive } from "vue";
 import { products } from "./items.js";
+import { cartArray } from "./cart.js";
 
 export const store = reactive({
   count: 0,
@@ -7,7 +8,8 @@ export const store = reactive({
     this.count++;
   },
 
-  cartArray: [],
+  cartArray,
+
   addToCart(id) {
     const item = products.find((product) => product.id === id);
     console.log(item);

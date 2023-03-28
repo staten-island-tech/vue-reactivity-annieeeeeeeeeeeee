@@ -1,11 +1,6 @@
-<script setup>
-import cart from "./cart pop-up.vue";
-</script>
-
 <template>
   <div>
     <h1>The Archive</h1>
-    <cart></cart>
   </div>
 </template>
 

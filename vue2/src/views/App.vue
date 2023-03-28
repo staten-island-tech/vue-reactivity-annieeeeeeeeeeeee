@@ -4,28 +4,41 @@
 import btn from "../components/btn template.vue";
 import items from "../components/item cards.vue";
 import top from "../components/top part.vue";
+import cart from "../components/side cart.vue";
 export default {
   components: {
     items,
-    cart,
     top,
+    cart,
   },
 };
 </script>
 
 <template>
   <main>
-    <top></top>
-    <items />
+    <section id="parent">
+      <div class="child">
+        <top></top>
+        <items id="item-display" />
+      </div>
+      <cart class="child" id="cart"></cart>
+    </section>
+
     <!-- <btn @click="show = !show" id="cart">Cart</btn> -->
-    <cart></cart>
   </main>
 </template>
 
 <style>
+#parent {
+  width: 100%;
+  display: inline-block;
+}
+.child {
+  display: inline-block;
+}
+
 #cart {
+  display: inline-block;
   float: right;
-  margin-right: 2rem;
-  margin-top: 2.5rem;
 }
 </style>

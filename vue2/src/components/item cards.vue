@@ -77,13 +77,13 @@ section {
   flex-direction: row;
   margin-top: 2rem;
   flex-wrap: wrap;
-  width: 80%;
+  width: 75%;
   margin: auto;
 }
 
 div {
-  width: 45rem;
-  height: 50rem;
+  width: 35rem;
+  height: 40rem;
   border: solid;
   border-width: 2px;
   margin-top: 5rem;
@@ -99,7 +99,7 @@ h4 {
 }
 
 img {
-  width: 45rem;
+  width: 35rem;
   height: 20rem;
 }
 
