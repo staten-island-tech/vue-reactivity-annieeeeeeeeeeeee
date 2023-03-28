@@ -14,7 +14,7 @@ import { products } from "../items.js";
       <btn
         id="card-btn"
         @click="
-          store.addToCart(e);
+          store.addToCart(product.id);
           store.increment();
         "
         >Add to Cart</btn

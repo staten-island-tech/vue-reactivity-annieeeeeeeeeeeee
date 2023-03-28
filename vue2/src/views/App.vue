@@ -3,7 +3,6 @@
 <script>
 import btn from "../components/btn template.vue";
 import items from "../components/item cards.vue";
-import cart from "../components/cart overlay.vue";
 import top from "../components/top part.vue";
 export default {
   components: {

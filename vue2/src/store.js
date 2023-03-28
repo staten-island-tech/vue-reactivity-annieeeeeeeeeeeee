@@ -1,4 +1,5 @@
 import { reactive } from "vue";
+import { products } from "./items.js";
 
 export const store = reactive({
   count: 0,
@@ -6,17 +7,16 @@ export const store = reactive({
     this.count++;
   },
 
-  addToCart(e) {
-    let cartArray = [];
-    if (e) {
-      let product = e.target.parentElement;
-      let name = product.textContent;
-      console.log(name);
-      this.cartArray.push({
+  cartArray: [],
+  addToCart(id) {
+    const item = products.find((product) => product.id === id);
+    console.log(item);
+    /*  this.cartArray.push({
         itemName: name,
       });
       console.log(cart.itemName);
-      console.log("hi");
-    }
+      console.log("hi"); */
+    this.cartArray.push(item);
+    console.log(this.cartArray);
   },
 });

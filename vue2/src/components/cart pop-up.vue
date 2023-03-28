@@ -17,7 +17,6 @@ export default {
       this.cart.push(e.target.parentElement);
     },
   }, */
-
 };
 </script>
 
