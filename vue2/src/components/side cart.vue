@@ -10,11 +10,11 @@ import { cartArray } from "../cart.js";
   <h2>Cart</h2>
   <section>
     <div class="card" id="display-cards" v-for="item in cartArray">
-      <img :src="item.img" :alt="item.alt" />
+      <!--       <img :src="item.img" :alt="item.alt" /> -->
       <h3 id="product-name" name="{{ item.itemName }}"></h3>
-      <h4>{{ item.brand }}</h4>
+      <!-- <h4>{{ item.brand }}</h4>
       <h4>${{ item.price }}</h4>
-      <btn>Remove</btn>
+      <btn>Remove</btn> -->
     </div>
   </section>
 </template>
