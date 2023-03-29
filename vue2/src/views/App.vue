@@ -19,9 +19,9 @@ export default {
     <section id="parent">
       <div class="child">
         <top></top>
-        <items id="item-display" />
+        <items />
       </div>
-      <cart class="child" id="cart"></cart>
+      <cart></cart>
     </section>
 
     <!-- <btn @click="show = !show" id="cart">Cart</btn> -->

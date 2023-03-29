@@ -11,13 +11,7 @@ export const store = reactive({
   cartArray,
 
   addToCart(id) {
-    const item = products.find((product) => product.id === id);
-    console.log(item);
-    /*  this.cartArray.push({
-        itemName: name,
-      });
-      console.log(cart.itemName);
-      console.log("hi"); */
+    let item = products.find((product) => product.id === id);
     this.cartArray.push(item);
     console.log(this.cartArray);
   },

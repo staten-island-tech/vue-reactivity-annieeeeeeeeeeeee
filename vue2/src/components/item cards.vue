@@ -8,17 +8,10 @@ import { products } from "../items.js";
   <section>
     <div class="card" id="display-cards" v-for="product in products">
       <img :src="product.img" :alt="product.alt" />
-      <h3 id="product-name" name="{{ product.itemName }}"></h3>
+      <h3 id="product-name">{{ product.itemName }}</h3>
       <h4>{{ product.brand }}</h4>
-      <h4>${{ product.price }}</h4>
-      <btn
-        id="card-btn"
-        @click="
-          store.addToCart(product.id);
-          store.increment();
-        "
-        >Add to Cart</btn
-      >
+      <h5>${{ product.price }}</h5>
+      <btn id="card-btn" @click="store.addToCart(product.id)">Add to Cart</btn>
     </div>
 
     <!-- <p v-for="cart in carts">{{ carts.itemName }}</p> -->
@@ -82,7 +75,7 @@ section {
 }
 
 div {
-  width: 35rem;
+  width: 30rem;
   height: 40rem;
   border: solid;
   border-width: 2px;
@@ -99,8 +92,8 @@ h4 {
 }
 
 img {
-  width: 35rem;
-  height: 20rem;
+  width: 30rem;
+  height: 23rem;
 }
 
 #card-btn {

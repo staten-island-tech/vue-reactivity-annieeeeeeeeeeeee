@@ -1,5 +1,5 @@
 <script setup>
-//import btn from "./btn template.vue";
+import btn from "./btn template.vue";
 //import products from "../src/array.js";
 //import cart from "./item cards.vue";
 import { store } from "../store.js";

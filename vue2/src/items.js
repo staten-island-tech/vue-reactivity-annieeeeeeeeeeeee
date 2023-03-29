@@ -2,7 +2,7 @@ const products = [
   {
     itemName: "Purse",
     brand: "Chanel",
-    img: "@assets/strawberry.jpg",
+    img: "",
     alt: "",
     price: 7927,
     id: 0,
