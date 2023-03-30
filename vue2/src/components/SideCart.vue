@@ -1,32 +1,23 @@
 <script setup>
-import btn from "./btn template.vue";
-//import products from "../src/array.js";
-//import cart from "./item cards.vue";
+import BtnTemp from "./BtnTemp.vue";
 import { store } from "../store.js";
 import { cartArray } from "../cart.js";
 </script>
 
 <template>
   <h2>Cart</h2>
-  <section>
-    <div class="card" id="display-cards" v-for="item in cartArray">
-      <!--       <img :src="item.img" :alt="item.alt" /> -->
-      <h3 id="product-name" name="{{ item.itemName }}"></h3>
-      <!-- <h4>{{ item.brand }}</h4>
-      <h4>${{ item.price }}</h4>
-      <btn>Remove</btn> -->
-    </div>
-  </section>
+
+  <div class="card" id="display-cards" v-for="item in cartArray">
+    <!-- <img :src="item.img" :alt="item.alt" /> -->
+    <h3 id="product-name" name="{{ item.itemName }}"></h3>
+    <h4>{{ item.brand }}</h4>
+    <h4>${{ item.price }}</h4>
+    <BtnTemp>Remove</BtnTemp>
+  </div>
 </template>
 
 <script>
 export default {
-  /*   methods: {
-    cart: [],
-    push(e) {
-      this.cart.push(e.target.parentElement);
-    },
-  }, */
   store,
   cartArray,
 };

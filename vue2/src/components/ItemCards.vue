@@ -1,21 +1,21 @@
 <script setup>
 import { store } from "../store.js";
-import btn from "./btn template.vue";
+import BtnTemp from "./BtnTemp.vue";
 import { products } from "../items.js";
 </script>
 
 <template>
-  <section>
+  <div id="layout">
     <div class="card" id="display-cards" v-for="product in products">
       <img :src="product.img" :alt="product.alt" />
       <h3 id="product-name">{{ product.itemName }}</h3>
       <h4>{{ product.brand }}</h4>
       <h5>${{ product.price }}</h5>
-      <btn id="card-btn" @click="store.addToCart(product.id)">Add to Cart</btn>
+      <BtnTemp id="card-btn" @click="store.addToCart(product.id)"
+        >Add to Cart</BtnTemp
+      >
     </div>
-
-    <!-- <p v-for="cart in carts">{{ carts.itemName }}</p> -->
-  </section>
+  </div>
 </template>
 
 <script>
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style scoped>
-section {
+#layout {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -74,7 +74,7 @@ section {
   margin: auto;
 }
 
-div {
+#display-cards {
   width: 30rem;
   height: 40rem;
   border: solid;

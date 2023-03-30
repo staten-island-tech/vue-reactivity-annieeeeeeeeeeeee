@@ -1,44 +1,29 @@
 <!-- <script setup></script> -->
 
 <script>
-import btn from "../components/btn template.vue";
-import items from "../components/item cards.vue";
-import top from "../components/top part.vue";
-import cart from "../components/side cart.vue";
+import BtnTemp from "../components/BtnTemp.vue";
+import ItemCards from "../components/ItemCards.vue";
+import TopPart from "../components/TopPart.vue";
+import SideCart from "../components/SideCart.vue";
 export default {
   components: {
-    items,
-    top,
-    cart,
+    ItemCards,
+    TopPart,
+    SideCart,
   },
 };
 </script>
 
 <template>
-  <main>
-    <section id="parent">
-      <div class="child">
-        <top></top>
-        <items />
-      </div>
-      <cart></cart>
-    </section>
+  <div id="parent">
+    <div class="child">
+      <TopPart></TopPart>
+      <ItemCards />
+    </div>
+    <SideCart></SideCart>
+  </div>
 
-    <!-- <btn @click="show = !show" id="cart">Cart</btn> -->
-  </main>
+  <!-- <btn @click="show = !show" id="cart">Cart</btn> -->
 </template>
 
-<style>
-#parent {
-  width: 100%;
-  display: inline-block;
-}
-.child {
-  display: inline-block;
-}
-
-#cart {
-  display: inline-block;
-  float: right;
-}
-</style>
+<style></style>
