@@ -12,7 +12,7 @@ export const store = reactive({
 
   addToCart(id) {
     let item = products.find((product) => product.id === id);
-    this.cartArray.push(item);
+    this.cartArray.cartArray.push(item);
     console.log(this.cartArray);
   },
 });

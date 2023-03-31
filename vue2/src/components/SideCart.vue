@@ -1,13 +1,11 @@
-<script setup>
-import BtnTemp from "./BtnTemp.vue";
-import { store } from "../store.js";
-import { cartArray } from "../cart.js";
-</script>
-
 <template>
   <h2>Cart</h2>
-
-  <div class="card" id="display-cards" v-for="item in cartArray">
+  <div
+    class="card"
+    id="display-cards"
+    v-for="item in cartArray.cartArray"
+    :key="item"
+  >
     <!-- <img :src="item.img" :alt="item.alt" /> -->
     <h3 id="product-name" name="{{ item.itemName }}"></h3>
     <h4>{{ item.brand }}</h4>
@@ -15,12 +13,10 @@ import { cartArray } from "../cart.js";
     <BtnTemp>Remove</BtnTemp>
   </div>
 </template>
-
-<script>
-export default {
-  store,
-  cartArray,
-};
+<script setup>
+import BtnTemp from "./BtnTemp.vue";
+import { store } from "../store.js";
+import { cartArray } from "../cart.js";
 </script>
 
 <style scoped>
@@ -42,7 +38,9 @@ div {
   margin-top: 5rem;
   text-align: center;
 }
-
+h2 {
+  font-size: 100px;
+}
 h3 {
   font-size: 5rem;
 }
