@@ -2,7 +2,7 @@ const products = [
   {
     itemName: "classic black",
     brand: "chanel",
-    img: ".cd/flap.jpg",
+    img: "./flap.jpg",
     alt: "chanel large classic in black",
     price: "10,989",
     id: 0,
