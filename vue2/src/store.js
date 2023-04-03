@@ -3,11 +3,6 @@ import { products } from "./items.js";
 import { cartArray } from "./cart.js";
 
 export const store = reactive({
-  count: 0,
-  increment() {
-    this.count++;
-  },
-
   cartArray,
 
   addToCart(id) {

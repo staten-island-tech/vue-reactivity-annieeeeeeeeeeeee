@@ -2,18 +2,22 @@
 import { store } from "../store.js";
 import BtnTemp from "./BtnTemp.vue";
 import { products } from "../items.js";
+import TopPart from "../components/TopPart.vue";
 </script>
 
 <template>
-  <div id="layout">
-    <div class="card" id="display-cards" v-for="product in products">
-      <img :src="product.img" :alt="product.alt" />
-      <h3 id="product-name">{{ product.itemName }}</h3>
-      <h4>{{ product.brand }}</h4>
-      <h5>${{ product.price }}</h5>
-      <BtnTemp id="card-btn" @click="store.addToCart(product.id)"
-        >Add to Cart</BtnTemp
-      >
+  <div id="parent">
+    <TopPart></TopPart>
+    <div id="layout">
+      <div class="card" id="display-cards" v-for="product in products">
+        <img v-if="product.img" :src="product.img" :alt="product.alt" />
+        <h3 id="product-name">{{ product.itemName }}</h3>
+        <h4>{{ product.brand }}</h4>
+        <h5>${{ product.price }}</h5>
+        <BtnTemp id="card-btn" @click="store.addToCart(product.id)"
+          >Add to Cart</BtnTemp
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -22,55 +26,31 @@ import { products } from "../items.js";
 export default {
   data() {
     return {
-      /* products: [
-        {
-          itemName: "Purse",
-          brand: "Chanel",
-          img: "../assets/strawberry.jpg",
-          alt: "",
-          price: 7927,
-        },
-        { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4283 },
-        { itemName: "HEHEE", brand: "Dior", img: "", alt: "", price: 4879 },
-        { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4354 },
-        { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4283 },
-        { itemName: "HEHEE", brand: "Dior", img: "", alt: "", price: 4879 },
-        { itemName: "Jofew", brand: "Chanel", img: "", alt: "", price: 4354 },
-      ], */
       products,
-
-      //carts: [],
       store,
+      TopPart,
     };
   },
-
-  /*  methods: {
-    cart: [],
-    addToCart(e) {
-      //console.log("hi");
-      if (e) {
-        let product = e.target.parentElement;
-        let name = product.textContent;
-        console.log(name);
-        this.cart.push({
-          itemName: name,
-        });
-        console.log(cart.itemName);
-        console.log("hi");
-      }
-    },
-  }, */
 };
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Alegreya Sans SC", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500&family=Kanit&display=swap");
+}
+#parent {
+  display: inline-block;
+  float: left;
+  width: 75%;
+}
 #layout {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   margin-top: 2rem;
   flex-wrap: wrap;
-  width: 75%;
+  width: 80%;
   margin: auto;
 }
 
@@ -84,19 +64,34 @@ export default {
 }
 
 h3 {
-  font-size: 5rem;
+  margin-top: 1rem;
+  font-size: 3.5rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-variant: small-caps;
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 400;
+  font-variant: small-caps;
 }
 
+h5 {
+  font-size: 1.5rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-variant: small-caps;
+  margin-top: 0.5rem;
+}
 img {
-  width: 30rem;
+  width: 29.6rem;
   height: 23rem;
+  object-fit: cover;
 }
 
 #card-btn {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 </style>

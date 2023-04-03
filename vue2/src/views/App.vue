@@ -15,15 +15,20 @@ export default {
 </script>
 
 <template>
-  <div id="parent">
-    <div class="child">
-      <TopPart></TopPart>
-      <ItemCards />
-    </div>
-    <SideCart></SideCart>
-  </div>
-
-  <!-- <btn @click="show = !show" id="cart">Cart</btn> -->
+  <ItemCards />
+  <SideCart></SideCart>
 </template>
 
-<style></style>
+<style>
+/* .parent {
+  display: inline-block;
+}
+.left {
+  display: inline-block;
+  float: left;
+}
+.right {
+  display: inline-block;
+  float: right;
+} */
+</style>
